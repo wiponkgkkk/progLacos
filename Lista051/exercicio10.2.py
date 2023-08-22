@@ -1,0 +1,25 @@
+'''
+qualquer número elevado a zero é 1, e elevado a 1 é ele próprio. A apresentação deve observar a seguinte
+exibição na tela:
+3 elevado à 0 = 1
+3 elevado à 1 = 3
+3 elevado à 2 = 9
+(...)
+3 elevado à 15 = 14348907
+OBS: Tente fazer em uma classe utilizando Math.pow() e em outra classe sem utilizar Math.pow()
+'''
+
+# Import
+
+import math
+
+#Contadores
+
+cont = 3
+acumulador = 0
+
+# Laços e Prints
+
+while acumulador <= 15:
+    print(f"{cont} elevado á {acumulador} = {cont ** acumulador:.0f}")
+    acumulador = acumulador + 1
