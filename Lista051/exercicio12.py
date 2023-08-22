@@ -7,15 +7,35 @@ como maior, nem como menor, e nem na contagem da média.
 
 # Inputs
 
-a = int(input("Informe um número: "))
+num = float(input("Informe um número (-1 encerra o programa): "))
 
-# Contadores
+#Cálculos
 
-cont = 1
+soma = 0
+total_resposta = 0
+maior = num
+menor = num
 
-# Laços
+# Laços e Prints
 
-while a <= -1:
-    int(input("Informe um número: "))
-    cont = a + cont
+while num != -1:
+    soma = soma + num
+    total_resposta = total_resposta + 1
 
+
+    if (maior < num):
+        maior = num
+
+    if (menor > num):
+        menor = num
+
+    num = float(input("Informe outro um número (-1 encerra o programa): "))
+
+
+if( maior == -1):
+    print(f'Você inseriu -1 na primeiro resposta.\nPROGRAMA ENCERRADO')
+else:
+    print(f"Maior valor inserido: {maior}")
+    print(f"Menor valor inserido: {menor}")
+    print(f"Média dos valores inseridos: {soma /total_resposta}")
+    print("FIM DO PROGRAMA")
